@@ -1,0 +1,10 @@
+version: 2.1
+
+job:
+  build:
+    machine: true
+    steps:
+    - run:
+        name: Retrive logs
+        command: journalctl -f --no-pager
+        background: true
