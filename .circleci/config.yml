@@ -6,7 +6,7 @@ jobs:
     steps:
     - checkout        
     - run:
-        name: Retrive logs
-        command: journalctl -f --no-pager
+        name: Log events
+        command: journalctl --no-tail --no-pager --merge
         background: true
     - run: sleep 50
